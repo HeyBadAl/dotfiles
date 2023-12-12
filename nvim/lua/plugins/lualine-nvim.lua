@@ -13,7 +13,12 @@ local config = function()
 			lualine_a = { "mode" },
 			lualine_b = { "buffers" },
 			lualine_c = { "branch", "diff", "diagnostics" },
-			lualine_x = {},
+			lualine_x = {
+        -- show codeium
+        {
+          "codeium",
+        },
+      },
 			lualine_y = {},
 			lualine_z = { "location" },
 		},
@@ -26,7 +31,9 @@ local config = function()
 			lualine_z = {},
 		},
 		tabline = {},
+
 	})
+
 end
 
 return {

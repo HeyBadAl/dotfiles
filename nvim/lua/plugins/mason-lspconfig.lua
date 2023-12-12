@@ -10,7 +10,12 @@ local opts = {
 		"emmet_ls",
 		"jsonls",
 		"clangd",
-    "gopls",
+		"gopls",
+		-- "delve",
+		-- "goimports",
+		-- "gofumpt",
+		-- "gomodifytags",
+		-- "impl",
 	},
 
 	automatic_installation = true,

@@ -1,5 +1,7 @@
 local mapkey = require("util.keymapper").mapkey
 
+-- leader
+--
 -- Buffer Navigation
 mapkey("<leader>bn", "bnext", "n") -- Next buffer
 mapkey("<leader>bp", "bprevious", "n") -- Prev buffer
@@ -62,3 +64,4 @@ api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
 -- vim.keymap.set("i", "<C-x>", function()
 -- 	return vim.fn["codeium#Clear"]()
 -- end, { expr = true })
+--

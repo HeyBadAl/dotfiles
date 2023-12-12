@@ -22,7 +22,7 @@ return {
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 				["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
 				["<C-e>"] = cmp.mapping.abort(), -- close completion window
-				["<CR>"] = cmp.mapping.confirm({ select = false }),
+				["<CR>"] = cmp.mapping.confirm({ select = true }),
 			}),
 			-- sources for autocompletion
 			sources = cmp.config.sources({
@@ -41,8 +41,9 @@ return {
 		})
 	end,
 	dependencies = {
-    "hrsh7th/cmp-buffer", -- source for text in buffer
-    "hrsh7th/cmp-path", -- source for file system paths
+		"hrsh7th/cmp-buffer", -- source for text in buffer
+		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-path", -- source for file system paths
 		"onsails/lspkind.nvim",
 		{
 
@@ -52,7 +53,14 @@ return {
 			-- install jsregexp (optional!).
 			build = "make install_jsregexp",
 		},
-    "saadparwaiz1/cmp_luasnip", -- for autocompletion
-    "rafamadriz/friendly-snippets", -- useful snippets
+		"saadparwaiz1/cmp_luasnip", -- for autocompletion
+		"rafamadriz/friendly-snippets", -- useful snippets
+		-- codeium
+		{
+			"Exafunction/codeium.nvim",
+			cmd = "Codeium",
+			build = ":Codeium Auth",
+			opts = {},
+		},
 	},
 }

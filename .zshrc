@@ -168,3 +168,7 @@ export PATH=$PATH:$HOME/.pulumi/bin
 # HISTSIZE and no command repetition 
 HISTSIZE=4000
 setopt hist_ignore_all_dups
+
+# fzf 
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+
