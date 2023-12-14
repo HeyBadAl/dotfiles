@@ -87,7 +87,6 @@ plugins=(
 	gh
 	git 
 	golang 
-	history 
 	kubectl
   minikube
 	node 
@@ -131,10 +130,10 @@ source $ZSH/oh-my-zsh.sh
 # source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 alias c=clear
+alias history="history -E"
 alias ls='lsd'
 
 alias bat='batcat'
@@ -171,4 +170,5 @@ setopt hist_ignore_all_dups
 
 # fzf 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
+
 
