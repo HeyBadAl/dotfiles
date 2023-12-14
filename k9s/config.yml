@@ -24,18 +24,18 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: minikube
-  currentCluster: minikube
+  currentContext: ""
+  currentCluster: ""
   keepMissingClusters: false
   clusters:
-    minikube:
+    "":
       namespace:
         active: default
         lockFavorites: false
         favorites:
         - default
       view:
-        active: pod
+        active: po
       featureGates:
         nodeShell: false
       portForwardAddress: localhost
