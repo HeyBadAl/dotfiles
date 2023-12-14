@@ -41,8 +41,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-# bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -51,7 +49,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec /usr/bin/konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -212,15 +210,7 @@ bindsym Control+Mod1+l exec --no-startup-id i3lock --nofork
 # touchpad single click and natural scrolling 
 exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Natural Scrolling Enabled" 1
-exec --no-startup-id xinput --set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Accel Speed" 0.3
-
-# brightness 
-exec --no-startup-id xbacklight -set 50  # Set initial brightness level
-exec --no-startup-id xbacklight -inc 0  # Ensure xbacklight is initialized
-
-# Brightness control keybindings
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+exec --no-startup-id xinput --set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Accel Speed" 0.4
 
 
 # Assign applications to workspaces
@@ -253,9 +243,16 @@ for_window [class="Slack"] move container to workspace $ws6
 
 
 # wallpaper 
-# exec --no-startup-id feh --bg-scale ~/Desktop/1.img
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id feh --bg-scale /home/badal/Desktop/1.jpg
+# exec --no-startup-id nitrogen --restore
 
 
 # screenshot 
 bindsym Print exec scrot '%Y-%m-%d_%H-%M-%S_screenshot.png' -e 'mv $f ~/Pictures/'
+
+# picom 
+exec --no-startup-id picom -b
+
+# brightness light 
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen brightness
