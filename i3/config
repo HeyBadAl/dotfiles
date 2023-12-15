@@ -256,3 +256,9 @@ exec --no-startup-id picom -b
 # brightness light 
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen brightness
+
+
+# mount E drive
+exec --no-startup-id mkdir -p /media/badal/E
+exec --no-startup-id mount /dev/sda5 /media/badal/E
+
