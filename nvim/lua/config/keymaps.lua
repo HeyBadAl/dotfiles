@@ -51,20 +51,6 @@ api.nvim_set_keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
 api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false })
 api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
 
--- -- Codeium
--- vim.keymap.set("i", "<C-g>", function()
--- 	return vim.fn["codeium#Accept"]()
--- end, { expr = true })
--- vim.keymap.set("i", "<C-n>", function()
--- 	return vim.fn["codeium#CycleCompletions"](1)
--- end, { expr = true })
--- vim.keymap.set("i", "<C-p>", function()
--- 	return vim.fn["codeium#CycleCompletions"](-1)
--- end, { expr = true })
--- vim.keymap.set("i", "<C-x>", function()
--- 	return vim.fn["codeium#Clear"]()
--- end, { expr = true })
---
 -- Notes
 mapkey("<leader>ng", "Neorg workspace general", "n")
 mapkey("<leader>nw", "Neorg workspace work", "n")
