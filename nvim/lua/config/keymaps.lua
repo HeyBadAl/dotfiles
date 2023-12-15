@@ -65,3 +65,6 @@ api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
 -- 	return vim.fn["codeium#Clear"]()
 -- end, { expr = true })
 --
+-- lazygit 
+mapkey("<leader>gg", "LazyGit", "n")
+
