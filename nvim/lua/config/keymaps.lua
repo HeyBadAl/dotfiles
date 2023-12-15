@@ -65,6 +65,11 @@ api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
 -- 	return vim.fn["codeium#Clear"]()
 -- end, { expr = true })
 --
+-- Notes
+mapkey("<leader>ng", "Neorg workspace general", "n")
+mapkey("<leader>nw", "Neorg workspace work", "n")
+mapkey("<leader>ny", "Neorg workspace youtube", "n")
+
 -- lazygit 
 mapkey("<leader>gg", "LazyGit", "n")
 
