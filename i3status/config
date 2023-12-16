@@ -17,7 +17,7 @@ general {
 
 #order += "ipv6"
 order += "disk /"
-order += "disk /home"
+# order += "disk /home"
 #order += "run_watch DHCP"
 #order += "run_watch VPN"
 #order += "wireless wlan0"
@@ -27,18 +27,17 @@ order += "battery 1"
 order += "cpu_usage"
 #order += "load"
 order += "volume master"
-order += "tztime localdate"
+# order += "tztime localdate"
 order += "tztime localtime"
 
+
 disk "/" {
-        format = "%avail"
-        prefix_type = custom
+	format = "  %avail"
+	prefix_type	= custom
+	low_threshold = 20
+	threshold_type = percentage_avail
 }
 
-disk "/home" {
-        format = "%avail"
-        prefix_type = custom
-}
 
 # run_watch DHCP {
 #         pidfile = "/var/run/dhclient*.pid"
@@ -59,17 +58,22 @@ disk "/home" {
 #         format_down = "  "
 # }
 #
+
 battery 1 {
-        format = "%status %percentage %remaining %emptytime"
-        format_down = "No battery"
-        status_chr = "CHR"
-        status_bat = "BAT"
-        status_unk = "UNK"
-        status_full = "FULL"
-        path = "/sys/class/power_supply/BAT%d/uevent"
-        low_threshold = 10
+    format = "%status %percentage %remaining"
+    format_down = ""
+    last_full_capacity = true
+    integer_battery_capacity = true
+    low_threshold = 11
+    threshold_type = percentage
+    hide_seconds = true
+    status_chr = " "
+    status_bat = " "
+    status_unk = " "
+    status_full = " "
 }
 
+   
 # cpu_temperature 0 {
 #         format = "  %degrees °C "
 #         max_threshold = 42
@@ -77,7 +81,7 @@ battery 1 {
 # }
 #
 cpu_usage {
-        format = "%usage"
+    format = " %usage"
 }
 #
 # load {
@@ -89,14 +93,14 @@ tztime localdate {
         format = "%Y-%m-%d"
 }
 
-tztime localtime {
-        format = "%H:%M"
+tztime localtime{
+    format = " %A %e.%B   %H:%M"
 }
 
 volume master {
-        format = "%volume"
-        format_muted = " %volume"
-        device = "default"
-        mixer = "Master"
-        mixer_idx = 0
+    format = " %volume"
+    format_muted = " "
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
 }
