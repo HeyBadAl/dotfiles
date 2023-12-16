@@ -58,20 +58,21 @@ local config = function()
 		},
 	})
 
-  -- go
-  lspconfig.gopls.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    cmd = {
-      "gopls",
-    },
-    filetypes = {
-      "go", "gomod", "gowork", "gotmpl" 
-    },
-    root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git")
-  })
-
-
+	-- go
+	lspconfig.gopls.setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+		cmd = {
+			"gopls",
+		},
+		filetypes = {
+			"go",
+			"gomod",
+			"gowork",
+			"gotmpl",
+		},
+		root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
+	})
 
 	-- typescript
 	lspconfig.tsserver.setup({
@@ -144,8 +145,8 @@ local config = function()
 	local solhint = require("efmls-configs.linters.solhint")
 	local cpplint = require("efmls-configs.linters.cpplint")
 	local clangformat = require("efmls-configs.formatters.clang_format")
-  local golint = require('efmls-configs.linters.golint')
-  local golines = require('efmls-configs.formatters.golines')
+	local golint = require("efmls-configs.linters.golint")
+	local golines = require("efmls-configs.formatters.golines")
 
 	-- configure efm server
 	lspconfig.efm.setup({
@@ -161,14 +162,13 @@ local config = function()
 			"typescriptreact",
 			"svelte",
 			"vue",
-			"markdown",
 			"docker",
 			"solidity",
 			"html",
 			"css",
 			"c",
 			"cpp",
-      "go",
+			"go",
 		},
 		init_options = {
 			documentFormatting = true,
@@ -181,7 +181,7 @@ local config = function()
 		settings = {
 			languages = {
 				lua = { luacheck, stylua },
-        go = {golint, golines},
+				go = { golint, golines },
 				python = { flake8, black },
 				typescript = { eslint, prettier_d },
 				json = { eslint, fixjson },
@@ -192,7 +192,6 @@ local config = function()
 				typescriptreact = { eslint, prettier_d },
 				svelte = { eslint, prettier_d },
 				vue = { eslint, prettier_d },
-				markdown = { prettier_d },
 				docker = { hadolint, prettier_d },
 				solidity = { solhint },
 				html = { prettier_d },
