@@ -41,6 +41,34 @@ local config = function()
 		filetypes = { "json", "jsonc" },
 	})
 
+	-- terraform
+	lspconfig.terraformls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "terraform", "hcl" },
+	})
+
+	-- sql
+	lspconfig.sqlls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "sql" },
+	})
+
+	-- markdown
+	lspconfig.grammarly.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "md" },
+	})
+
+	--yaml
+	lspconfig.yamlls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "yaml", "yml" },
+	})
+
 	-- python
 	lspconfig.pyright.setup({
 		capabilities = capabilities,
@@ -147,6 +175,12 @@ local config = function()
 	local clangformat = require("efmls-configs.formatters.clang_format")
 	local golint = require("efmls-configs.linters.golint")
 	local golines = require("efmls-configs.formatters.golines")
+	local terraform_fmt = require("efmls-configs.formatters.terraform_fmt")
+	local sqlfluff = require("efmls-configs.linters.sqlfluff")
+	local sql_formatter = require("efmls-configs.formatters.sql-formatter")
+	local markdownlint = require("efmls-configs.linters.markdownlint")
+	local cbfmt = require("efmls-configs.formatters.cbfmt")
+	local yamllint = require("efmls-configs.linters.yamllint")
 
 	-- configure efm server
 	lspconfig.efm.setup({
@@ -169,6 +203,10 @@ local config = function()
 			"c",
 			"cpp",
 			"go",
+			"terraform",
+			"sql",
+			"markdown",
+			"yml",
 		},
 		init_options = {
 			documentFormatting = true,
@@ -198,6 +236,10 @@ local config = function()
 				css = { prettier_d },
 				c = { clangformat, cpplint },
 				cpp = { clangformat, cpplint },
+				terraform = { terraform_fmt },
+				sql = { sqlfluff, sql_formatter },
+				markdown = { markdownlint, cbfmt },
+				yaml = { yamllint, prettier_d },
 			},
 		},
 	})
