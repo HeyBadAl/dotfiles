@@ -19,12 +19,12 @@ return {
 
 		-- configure nvim-tree
 		nvimtree.setup({
-      on_attach = "default",
-      hijack_cursor = false,
-      auto_reload_on_write = true,
-      disable_netrw = false,
-      hijack_netrw = true,
-      hijack_unnamed_buffer_when_opening = false,
+			on_attach = "default",
+			hijack_cursor = false,
+			auto_reload_on_write = true,
+			disable_netrw = false,
+			hijack_netrw = true,
+			hijack_unnamed_buffer_when_opening = false,
 			view = {
 				width = 35,
 				relativenumber = true,
@@ -55,6 +55,14 @@ return {
 			renderer = {
 				indent_markers = {
 					enable = true,
+					icons = {
+						corner = "󱞩 ",
+						edge = "│ ",
+            item = "󱞩 ",
+						-- edge = " │ ",
+						-- item = " │ ",
+						none = "  ",
+					},
 				},
 				icons = {
 					glyphs = {
