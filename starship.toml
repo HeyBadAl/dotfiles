@@ -4,14 +4,15 @@ palette = "catppuccin_mocha"
 right_format = "$git_branch$git_status$time"
 
 [character]
-success_symbol = "[󱞩](bold green)"
+success_symbol = "[󱞩](bold cyan)"
 error_symbol = "[✗](bold red)"
 
-[cmd_duration]
-min_time = 4
-show_milliseconds = false
-disabled = false
-style = "bold italic red"
+# [cmd_duration]
+# min_time = 4
+# show_milliseconds = false
+# disabled = false
+# style = "bold italic red"
+#
 
 [git_status]
 conflicted = "⚔️ "
@@ -34,7 +35,7 @@ style = "bright-white"
 disabled = false
 
 [directory]
-truncation_length = 5
+truncation_length = 3
 format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 [dart]
@@ -55,17 +56,17 @@ symbol = " "
 [hg_branch]
 symbol = " "
 
-[java]
-symbol = " "
+# [java]
+# symbol = " "
 
-[julia]
-symbol = " "
+# [julia]
+# symbol = " "
 
-[memory_usage]
-symbol = " "
-
-[package]
-symbol = " "
+# [memory_usage]
+# symbol = " "
+#
+# [package]
+# symbol = " "
 
 [python]
 symbol = " "
@@ -76,12 +77,12 @@ python_binary = ["./venv/bin/python", "python", "python3", "python2"]
 detect_extensions = ["py"]
 version_format = "v${raw}"
 
-[ruby]
-symbol = " "
-
-[rust]
-symbol = " "
-
+# [ruby]
+# symbol = " "
+#
+# [rust]
+# symbol = " "
+#
 [nodejs]
 format = "via [ Node.js $version](bold green) "
 detect_files = ["package.json", ".node-version"]
