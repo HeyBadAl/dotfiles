@@ -52,7 +52,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec /usr/bin/konsole
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
@@ -202,7 +202,7 @@ bindsym $mod+Control+k resize shrink height 5 px or 5 ppt
 bindsym $mod+Control+l resize grow width 5 px or 5 ppt
 
 # lock time 
-exec --no-startup-id xautolock -time 420 -locker "i3lock -c 000000"
+exec --no-startup-id xautolock -time 1500 -locker "i3lock -c 000000"
 
 # key for locking screen
 bindsym Control+Mod1+l exec --no-startup-id i3lock --nofork
