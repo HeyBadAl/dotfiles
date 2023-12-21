@@ -4,6 +4,10 @@ local config = function()
 	local telescope = require("telescope")
 	telescope.setup({
 		defaults = {
+			prompt_prefix = "󱞩 ",
+			selection_caret = " ",
+			path_display = { "smart" },
+
 			mappings = {
 				i = {
 					["<C-j>"] = "move_selection_next",
@@ -20,6 +24,11 @@ local config = function()
 				".cache",
 				"__pycache__",
 				"venv",
+			},
+			-- include .github directory
+			file_include_patterns = {
+				".github/**",
+				".gitignore",
 			},
 		},
 		pickers = {
