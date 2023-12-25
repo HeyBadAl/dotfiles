@@ -35,7 +35,7 @@ return {
 				expr = true,
 				silent = true,
 			},
-      {
+			{
 				"<C-p>",
 				function()
 					return vim.fn["codeium#CycleCompletions"](-1)
@@ -44,7 +44,7 @@ return {
 				expr = true,
 				silent = true,
 			},
-      {
+			{
 				"<C-x>",
 				function()
 					return vim.fn["codeium#Clear"]()
