@@ -14,22 +14,22 @@ local config = function()
 					["<C-k>"] = "move_selection_previous",
 				},
 			},
-			file_ignore_patterns = {
-				"node_modules",
-				".git",
-				"target",
-				"build",
-				"dist",
-				"vendor",
-				".cache",
-				"__pycache__",
-				"venv",
-			},
-			-- include .github directory
-			file_include_patterns = {
-				".github/**",
-				".gitignore",
-			},
+			-- file_ignore_patterns = {
+			-- 	"node_modules",
+			-- 	".git",
+			-- 	"target",
+			-- 	"build",
+			-- 	"dist",
+			-- 	"vendor",
+			-- 	".cache",
+			-- 	"__pycache__",
+			-- 	"venv",
+			-- },
+			-- -- include .github directory
+			-- file_include_patterns = {
+			-- 	".github/**",
+			-- 	".gitignore",
+			-- },
 		},
 		pickers = {
 			find_files = {
