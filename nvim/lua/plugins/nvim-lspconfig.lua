@@ -34,6 +34,12 @@ local config = function()
 		},
 	})
 
+	-- ansible
+	lspconfig.ansiblels.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+	})
+
 	-- json
 	lspconfig.jsonls.setup({
 		capabilities = capabilities,
@@ -110,20 +116,6 @@ local config = function()
 			"typescript",
 		},
 		root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
-	})
-
-	-- bash
-	lspconfig.bashls.setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-		filetypes = { "sh", "aliasrc" },
-	})
-
-	-- solidity
-	lspconfig.solidity.setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-		filetypes = { "solidity" },
 	})
 
 	-- typescriptreact, javascriptreact, css, sass, scss, less, svelte, vue
@@ -205,7 +197,6 @@ local config = function()
 			"go",
 			"terraform",
 			"sql",
-			"markdown",
 			"yml",
 		},
 		init_options = {
