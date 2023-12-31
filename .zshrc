@@ -58,3 +58,6 @@ setopt hist_ignore_all_dups
 # fzf 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 
+# starship 
+# eval "$(starship init zsh)"
+#
