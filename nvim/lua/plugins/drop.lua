@@ -3,7 +3,7 @@ return {
 	event = "VimEnter",
 	config = function()
 		require("drop").setup({
-			theme = "spring",
+			theme = "xmas", -- leaves, snow, stars, xmas, spring, summer
 		})
 	end,
 }
