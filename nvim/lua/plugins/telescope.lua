@@ -50,8 +50,8 @@ return {
 	keys = {
 		mapkey("<leader>fk", "Telescope keymaps", "n"),
 		mapkey("<leader>fh", "Telescope help_tags", "n"),
-		mapkey("<leader>ff", "Telescope find_files", "n"),
+		mapkey("<leader><space>", "Telescope find_files", "n"),
 		mapkey("<leader>fw", "Telescope live_grep", "n"),
-		mapkey("<leader>fb", "Telescope buffers", "n"),
+		mapkey("<leader>,", "Telescope buffers", "n"),
 	},
 }

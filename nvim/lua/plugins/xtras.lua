@@ -1,12 +1,35 @@
 return {
-	-- alpha
+	-- leap.nvim
 	{
-		"goolord/alpha-nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		lazy = false,
+		"ggandor/leap.nvim",
+		enabled = true,
+		keys = {
+			{ "s", mode = { "n", "x", "o" }, desc = "Leap forward to" },
+			{ "S", mode = { "n", "x", "o" }, desc = "Leap backward to" },
+			{ "gs", mode = { "n", "x", "o" }, desc = "Leap from windows" },
+		},
+		config = function(_, opts)
+			local leap = require("leap")
+			for k, v in pairs(opts) do
+				leap.opts[k] = v
+			end
+			leap.add_default_mappings(true)
+			vim.keymap.del({ "x", "o" }, "x")
+			vim.keymap.del({ "x", "o" }, "X")
+		end,
+	},
 
+	-- vim-repeat
+	{ "tpope/vim-repeat", event = "VeryLazy" },
+
+	-- drop
+	{
+		"folke/drop.nvim",
+		event = "VimEnter",
 		config = function()
-			require("alpha").setup(require("alpha.themes.dashboard").config)
+			require("drop").setup({
+				theme = "xmas", -- leaves, snow, stars, xmas, spring, summer
+			})
 		end,
 	},
 
@@ -16,45 +39,6 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		config = true,
 	},
-
-	-- comment
-	{
-		"numToStr/Comment.nvim",
-		opts = {
-			-- add any options here
-		},
-		lazy = false,
-	},
-
-	-- friendly-snippets
-	{
-		"rafamadriz/friendly-snippets",
-		config = function()
-			require("luasnip.loaders.from_vscode").lazy_load()
-		end,
-	},
-
-	-- gitsigns
-	{
-		"lewis6991/gitsigns.nvim",
-		event = { "BufReadPre", "BufNewFile" },
-		opts = {
-			signs = {
-				add = { text = "▎" },
-				change = { text = "▎" },
-				delete = { text = "" },
-				topdelete = { text = "" },
-				changedelete = { text = "▎" },
-				untracked = { text = "▎" },
-			},
-		},
-		config = function(_, opts)
-			require("gitsigns").setup(opts)
-		end,
-	},
-
-	-- inednt-blankline
-	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", lazy = false, opts = {} },
 
 	-- markdown preview
 	{
@@ -74,34 +58,6 @@ return {
 		config = function()
 			vim.cmd([[do FileType]])
 		end,
-	},
-
-	-- which key
-	{
-
-		"folke/which-key.nvim",
-		event = "VeryLazy",
-		init = function()
-			vim.o.timeout = true
-			vim.o.timeoutlen = 500
-		end,
-		opts = {
-			defaults = {
-				["<leader>d"] = {
-					name = "+debug",
-				},
-			},
-		},
-	},
-
-	-- zen mode
-	{
-		"folke/zen-mode.nvim",
-		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-		},
 	},
 
 	-- tailwind-colorizer-cmp
@@ -130,20 +86,6 @@ return {
 			"nvim-lua/plenary.nvim",
 		},
 	},
-
-	-- todo-comment
-	{
-		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-		},
-	},
-
-	-- mini-pairs
-	{ "echasnovski/mini.pairs", event = "VeryLazy", opts = {} },
 
 	-- neorg
 	{
@@ -178,15 +120,6 @@ return {
 	{
 		"machakann/vim-highlightedyank",
 		lazy = false,
-	},
-
-	-- vim-illuminate
-	{
-		"RRethy/vim-illuminate",
-		lazy = false,
-		config = function()
-			require("illuminate").configure({})
-		end,
 	},
 
 	-- vim-maximizer

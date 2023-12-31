@@ -38,6 +38,15 @@ return {
 				show_end_of_buffer = false,
 
 				integrations = {
+          alpha = true,
+          leap = true,
+          indent_blankline = true,
+          mason = true,
+          markdown = true,
+          treesitter = true,
+          treesitter_context = true,
+          which_key = true,
+          noice = true,
 					cmp = true,
 					gitsigns = true,
 					nvimtree = true,
