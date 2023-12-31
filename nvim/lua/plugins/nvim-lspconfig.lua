@@ -156,7 +156,7 @@ local config = function()
 	local stylua = require("efmls-configs.formatters.stylua")
 	local flake8 = require("efmls-configs.linters.flake8")
 	local black = require("efmls-configs.formatters.black")
-	local eslint = require("efmls-configs.linters.eslint")
+	local eslint_d = require("efmls-configs.linters.eslint_d")
 	local prettier_d = require("efmls-configs.formatters.prettier_d")
 	local fixjson = require("efmls-configs.formatters.fixjson")
 	local shellcheck = require("efmls-configs.linters.shellcheck")
@@ -186,7 +186,7 @@ local config = function()
 			"javascriptreact",
 			"typescript",
 			"typescriptreact",
-			"svelte",
+			-- "svelte",
 			"vue",
 			"docker",
 			"solidity",
@@ -212,15 +212,15 @@ local config = function()
 				lua = { luacheck, stylua },
 				go = { golint, golines },
 				python = { flake8, black },
-				typescript = { eslint, prettier_d },
-				json = { eslint, fixjson },
-				jsonc = { eslint, fixjson },
+				typescript = { eslint_d, prettier_d },
+				json = { eslint_d, fixjson },
+				jsonc = { eslint_d, fixjson },
 				sh = { shellcheck, shfmt },
-				javascript = { eslint, prettier_d },
-				javascriptreact = { eslint, prettier_d },
-				typescriptreact = { eslint, prettier_d },
-				svelte = { eslint, prettier_d },
-				vue = { eslint, prettier_d },
+				javascript = { eslint_d, prettier_d },
+				javascriptreact = { eslint_d, prettier_d },
+				typescriptreact = { eslint_d, prettier_d },
+				svelte = { eslint_d, prettier_d },
+				vue = { eslint_d, prettier_d },
 				docker = { hadolint, prettier_d },
 				solidity = { solhint },
 				html = { prettier_d },
