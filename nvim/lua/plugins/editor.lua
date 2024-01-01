@@ -1,4 +1,59 @@
+local mapkey = require("util.keymapper").mapkey
 return {
+	-- telescope
+	{
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.3",
+		lazy = false,
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("telescope").setup({
+				defaults = {
+					prompt_prefix = "󱞩 ",
+					selection_caret = " ",
+					path_display = { "smart" },
+
+					mappings = {
+						i = {
+							["<C-j>"] = "move_selection_next",
+							["<C-k>"] = "move_selection_previous",
+						},
+					},
+					file_ignore_patterns = {
+						".git",
+					},
+					-- -- include .github directory
+					-- file_include_patterns = {
+					-- 	".github/**",
+					-- 	".gitignore",
+					-- },
+				},
+				pickers = {
+					find_files = {
+						theme = "dropdown",
+						previewer = true,
+						hidden = true,
+					},
+					live_grep = {
+						theme = "dropdown",
+						previewer = true,
+					},
+					buffers = {
+						theme = "dropdown",
+						previewer = true,
+					},
+				},
+			})
+		end,
+
+		keys = {
+			mapkey("<leader>fk", "Telescope keymaps", "n"),
+			mapkey("<leader>fh", "Telescope help_tags", "n"),
+			mapkey("<leader><space>", "Telescope find_files", "n"),
+			mapkey("<leader>fw", "Telescope live_grep", "n"),
+			mapkey("<leader>,", "Telescope buffers", "n"),
+		},
+	},
 	-- nvim-tree
 	-- local HEIGHT_RATIO = 0.8 -- You can change this
 	-- local WIDTH_RATIO = 0.5 -- You can change this took
