@@ -1,13 +1,12 @@
 local mapkey = require("util.keymapper").mapkey
 
--- leader
---
 -- Buffer Navigation
-mapkey("<leader>bn", "bnext", "n") -- Next buffer
-mapkey("<leader>bp", "bprevious", "n") -- Prev buffer
-mapkey("<leader>bx", "bdelete", "n") -- Prev buffer
-mapkey("<leader>bb", "e #", "n") -- Switch to Other Buffer
-mapkey("<leader>`", "e #", "n") -- Switch to Other Buffer
+mapkey("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+mapkey("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+-- mapkey("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+-- mapkey("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
+mapkey("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+mapkey("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 
 -- Directory Navigatio}n
 mapkey("<leader>m", "NvimTreeFocus", "n")
@@ -23,13 +22,32 @@ mapkey("<C-j>", "wincmd j", "t") -- Navigate Down
 mapkey("<C-k>", "wincmd k", "t") -- Navigate Up
 mapkey("<C-l>", "wincmd l", "t") -- Navigate Right
 
+-- resize window using <ctrl> arrow keys
+mapkey("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
+mapkey("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+mapkey("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
+mapkey("n", "<C-Right>", "<cmd>vertical resize +1<cr>", { desc = "Increase window width" })
+
 -- Window Management
 mapkey("<leader>sv", "vsplit", "n") -- Split Vertically
 mapkey("<leader>sh", "split", "n") -- Split Horizontally
-mapkey("<C-Up>", "resize +2", "n")
-mapkey("<C-Down>", "resize -2", "n")
-mapkey("<C-Left>", "vertical resize +2", "n")
-mapkey("<C-Right>", "vertical resize -2", "n")
+
+-- clear search highlight
+mapkey("n", "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
+
+-- add undo break-points
+-- mapkey("i", ",", ",<c-g>u")
+-- mapkey("i", ".", ".<c-g>u")
+-- mapkey("i", ";", ";<c-g>u")
+--
+-- save file
+-- mapkey({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
+
+-- keywordprg
+mapkey("n", "<leader>K", "<cmd>norm! K<cr>", { desc = "Keywordprg" })
+
+-- new file
+mapkey("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 
 -- Indenting
 vim.keymap.set("v", "<", "<gv", { silent = true, noremap = true })
@@ -56,6 +74,11 @@ mapkey("<leader>ng", "Neorg workspace general", "n")
 mapkey("<leader>nw", "Neorg workspace work", "n")
 mapkey("<leader>ny", "Neorg workspace youtube", "n")
 
--- lazygit 
+-- lazygit
 mapkey("<leader>gg", "LazyGit", "n")
 
+-- quit all
+mapkey("<leader>qq", "qa", "n")
+
+-- floating terminal
+mapkey("<leader>t", "ToggleTerm", "n")
