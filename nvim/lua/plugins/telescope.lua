@@ -20,12 +20,12 @@ return {
         selection_caret = " ",
         mappings = {
           i = {
-            ["<Tab>"] = actions.move_selection_next,
-            ["<S-Tab>"] = actions.move_selection_previous,
+            ["<C-j>"] = actions.move_selection_next,
+            ["<C-k>"] = actions.move_selection_previous,
           },
           n = {
-            ["<Tab>"] = actions.move_selection_next,
-            ["<S-Tab>"] = actions.move_selection_previous,
+            ["<C-j>"] = actions.move_selection_next,
+            ["<C-k>"] = actions.move_selection_previous,
           },
         },
         file_ignore_patterns = {
