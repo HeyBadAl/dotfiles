@@ -26,7 +26,7 @@ sudo apt upgrade -y
 mkdir -p ${HOME}/.config
 
 # Install applications
-sudo apt install -y vim tmux htop neofetch tree git curl wget vlc obs-studio screenkey unzip p7zip-full xclip python3-pip zsh
+sudo apt install -y vim tmux i3 i3-status picom htop neofetch tree git curl wget vlc obs-studio screenkey unzip p7zip-full xclip python3-pip zsh
 
 # make zsh as default shell
 chsh -s $(which zsh)
@@ -78,6 +78,12 @@ ln -s "${HOME}/dotfiles/starship.toml" "${HOME}/.config/starship.toml"
 ln -s "${HOME}/dotfiles/.fonts" "${HOME}/.fonts"
 ln -s "${HOME}/dotfiles/nvim" "${HOME}/.config/nvim"
 ln -s "${HOME}/dotfiles/k9s" "${HOME}/.config/k9s"
+mkdir -p ${HOME}/.config/i3
+ln -s ${HOME}/dotfiles/i3/config ${HOME}/.config/i3/config
+mkdir -p ${HOME}/.config/i3status
+ln -s ${HOME}/dotfiles/i3status/config ${HOME}/.config/i3status/config
+mkdir -p ${HOME}/.config/picom
+ln -s ${HOME}/dotfiles/picom/picom.conf ${HOME}/.config/picom/picom.conf
 
 # set up docker
 echo "setting up docker"
