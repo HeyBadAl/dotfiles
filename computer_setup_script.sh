@@ -41,7 +41,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # update plugin in .zshrc i.e. zsh-autosuggestions, zsh-syntax-highlighting
-sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/g' ~/.zshrc
+sed -i 's/plugins=(git)/plugins=(aws docker docker-compose gh git kubectl minikube redis-cli	terraform	tmux zsh-autosuggestions zsh-syntax-highlighting)/g' ~/.zshrc
 
 # install starship
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
