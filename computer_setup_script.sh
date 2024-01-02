@@ -24,7 +24,6 @@ sudo apt upgrade -y
 
 # create config folder
 mkdir -p ${HOME}/.config
-mkdir -p ${HOME}/.config
 
 # Install applications
 sudo apt install -y vim tmux htop neofetch tree git curl wget vlc obs-studio screenkey unzip p7zip-full xclip python3-pip zsh
