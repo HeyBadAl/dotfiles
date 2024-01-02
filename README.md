@@ -2,7 +2,7 @@
 
 Welcome to my dotfiles repository! This space houses configurations for various tools and applications that I use daily.
 
-![Screenshot](./assets/screenshot)
+![Screenshot](./assets/screenshot.jpg)
 
 ## Tools and Applications I Use
 
