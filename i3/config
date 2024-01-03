@@ -220,7 +220,7 @@ bindsym Control+Mod1+l exec --no-startup-id i3lock --nofork
 # touchpad single click and natural scrolling 
 exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Natural Scrolling Enabled" 1
-exec --no-startup-id xinput --set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Accel Speed" 0.4
+exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Accel Speed" 0.4
 
 
 # Assign applications to workspaces
@@ -253,7 +253,7 @@ for_window [class="Slack"] move container to workspace $ws6
 
 
 # wallpaper
-exec --no-startup-id feh --bg-fill /home/badal/Desktop/1.jpg
+exec --no-startup-id feh --bg-fill '/home/badal/Desktop/1.jpg'
 exec --no-startup-id nitrogen --restore
 
 
