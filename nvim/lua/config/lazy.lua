@@ -44,11 +44,14 @@ require("lazy").setup({
 
     -- ESLINT
     { import = "lazyvim.plugins.extras.linting.eslint" },
+    
     -- prettier
     { import = "lazyvim.plugins.extras.formatting.prettier" },
 
+    -- UI
     { import = "lazyvim.plugins.extras.ui.edgy" },
 
+    -- vscode
     { import = "lazyvim.plugins.extras.vscode" },
 
     -- neotest

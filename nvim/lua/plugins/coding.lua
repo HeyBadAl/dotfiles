@@ -64,4 +64,12 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
   },
+
+  -- nvim-cmp
+  {
+    "hrsh7th/nvim-cmp",
+    sources = {
+      { name = "codeium", group_index = 1, priority = 100 },
+    },
+  },
 }
