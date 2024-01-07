@@ -253,7 +253,7 @@ for_window [class="Slack"] move container to workspace $ws6
 
 
 # wallpaper
-exec --no-startup-id feh --bg-fill '/home/badal/Desktop/1.jpg'
+exec --no-startup-id feh --bg-fill /home/badal/Desktop/1.jpg
 exec --no-startup-id nitrogen --restore
 
 
