@@ -84,6 +84,10 @@ mkdir -p ${HOME}/.config/i3status
 ln -s ${HOME}/dotfiles/i3status/config ${HOME}/.config/i3status/config
 mkdir -p ${HOME}/.config/picom
 ln -s ${HOME}/dotfiles/picom/picom.conf ${HOME}/.config/picom/picom.conf
+mkdir -p ${HOME}/.local/share/rofi/themes
+ln -s ${HOME}/dotfiles/rofi/catppuccin.rasi ${HOME}/.local/share/rofi/themes/catppuccin.rasi
+mkdir -p ${HOME}/.config/rofi
+ln -s ${HOME}/dotfiles/rofi/config.rasi ${HOME}/.config/rofi/config.rasi
 
 # set up docker
 echo "setting up docker"
