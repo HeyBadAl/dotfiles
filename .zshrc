@@ -20,7 +20,6 @@ alias al="sudo apt update; sudo apt upgrade -y"
 alias lg="lazygit"
 
 alias r='source ~/.zshrc'
-alias vim='nvim'
 alias n='nvim'
 
 
