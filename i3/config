@@ -5,6 +5,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar.
 # set SF Pro display with size 9
+font pango:SF Pro Display 9
 
 ###############################################################################
 #                     Startup Applications
@@ -50,7 +51,11 @@ floating_modifier $mod
 # tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/konsole
+bindsym $mod+Return exec /home/linuxbrew/.linuxbrew/bin/wezterm
+# bindsym $mod+Return exec /usr/bin/konsole
+
+# set keybind for opening Brave-browser
+bindsym $mod+b exec /usr/bin/brave-browser
 
 # kill focused window
 bindsym $mod+q kill
