@@ -17,19 +17,11 @@ Welcome to my dotfiles repository! This space houses configurations for various 
 
 ### Terminal Multiplexer
 
-- **k9s**: Configuration files include [config.yml](k9s/config.yml) and [skin.yml](k9s/skin.yml).
+- **wezterm**: I've switched to using WezTerm as my default terminal. Configuration files are in [wezterm](https://github.com/HeyBadAl/dotfiles/tree/main/wezterm).
 
 ### Neovim
 
-- **Neovim**: A highly extensible text editor. My Neovim configuration is split into various files located in [nvim](nvim):
-  - Main configuration: [init.lua](nvim/init.lua)
-  - Lua modules for organization:
-    - [autocmds.lua](nvim/lua/config/autocmds.lua)
-    - [globals.lua](nvim/lua/config/globals.lua)
-    - [keymaps.lua](nvim/lua/config/keymaps.lua)
-    - [options.lua](nvim/lua/config/options.lua)
-  - Plugins configurations in [plugins](nvim/lua/plugins).
-  - Utility functions in [util](nvim/lua/util).
+- **LazyVim**: I've adopted LazyVim, a preconfigured Neovim distribution. This choice streamlines my Neovim setup and includes various enhancements out of the box.
 
 ### Compositor
 
@@ -37,7 +29,16 @@ Welcome to my dotfiles repository! This space houses configurations for various 
 
 ### Prompt
 
-- **Starship**: A minimal, fast, and customizable prompt. The configuration file is [starship.toml](starship.toml).
+- **Powerlevel10k**: I've switched to using Powerlevel10k as my prompt, providing a highly customizable and feature-rich prompt experience.
+- **Starship**(Not Using Anymore): A minimal, fast, and customizable prompt. The configuration file is [starship.toml](starship.toml).
+
+### Other Tools
+
+- **rofi**: As my application launcher.
+- **lazygit**: A terminal-based UI for Git.
+- **.p10k.zsh**: My Zsh theme configuration.
+- **tmux**: Terminal multiplexer for enhanced terminal sessions.
+- **neofetch**: Configuration for displaying system information.
 
 ## How to Use
 
