@@ -4,7 +4,7 @@
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar.
-font pango:SF-Pro-Display 9
+# set SF Pro display with size 9
 
 ###############################################################################
 #                     Startup Applications
@@ -47,7 +47,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-tiling_drag modifier titlebar
+# tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec /usr/bin/konsole
