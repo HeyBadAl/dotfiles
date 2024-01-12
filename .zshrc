@@ -42,7 +42,15 @@ export PATH=$PATH:$HOME/.pulumi/bin
 
 # HISTSIZE and no command repetition 
 HISTSIZE=4000
-setopt hist_ignore_all_dups
+if [[ -n "$TMUX" ]]; then
+    setopt HIST_IGNORE_DUPS
+    setopt HIST_IGNORE_ALL_DUPS
+    setopt HIST_IGNORE_SPACE
+else
+    setopt HIST_IGNORE_DUPS
+    setopt HIST_IGNORE_ALL_DUPS
+    setopt HIST_IGNORE_SPACE
+fi
 
 # fzf 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
