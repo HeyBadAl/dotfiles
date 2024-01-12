@@ -11,7 +11,6 @@ return {
         show_end_of_buffer = false,
 
         integrations = {
-          alpha = true,
           dashboard = true,
           leap = true,
           indent_blankline = true,
