@@ -54,18 +54,7 @@ return {
               },
             },
           },
-          lualine_x = {
-            -- add codeium
-            {
-              function()
-                return require("codeium").status()
-              end,
-              cond = function()
-                return package.loaded["codeium"] and require("codeium").status() ~= ""
-              end,
-              color = Util.ui.fg("Debug"),
-            },
-          },
+          lualine_x = {},
           lualine_y = {
             {
               function()
