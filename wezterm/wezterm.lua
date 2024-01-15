@@ -18,7 +18,7 @@ config.font = wezterm.font("JetBrainsMonoNL NF")
 config.font_size = 13
 config.line_height = 1
 
-config.max_fps = 144
+-- config.max_fps = 144
 
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = false

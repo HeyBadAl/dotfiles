@@ -253,7 +253,7 @@ bar {
 
 # borders
 default_border pixel 2
-default_floating_border pixel 1
+default_floating_border pixel 3
 
 # Color shemes for windows 
 set $bgcolor	#523d6499
