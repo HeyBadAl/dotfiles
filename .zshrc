@@ -10,6 +10,10 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 plugins=(
+  aws
+  docker
+  kubectl
+  minikube
 	zsh-autosuggestions 
 	zsh-syntax-highlighting
 )
@@ -23,7 +27,8 @@ alias ls='lsd'
 
 alias bat='batcat'
 alias bt="acpi"
-alias al="sudo apt update; sudo apt upgrade -y"
+alias al="sudo apt update; sudo apt upgrade -y; brew update; brew upgrade"
+alias cl='sudo apt autoremove -y; sudo apt clean; brew cleanup;'
 alias lg="lazygit"
 
 alias r='source ~/.zshrc'
