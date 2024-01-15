@@ -21,7 +21,7 @@ config.line_height = 1
 -- config.max_fps = 144
 
 config.use_fancy_tab_bar = false
-config.enable_tab_bar = false
+config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 

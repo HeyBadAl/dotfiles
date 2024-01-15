@@ -217,7 +217,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # assign applications to workspaces
 assign [class="Brave-browser"] $ws2
-assign [class="firefox"] $ws2
 assign [class="TelegramDesktop"] $ws3
 assign [class="vlc"] $ws4
 assign [class="Code"] $ws5
@@ -225,7 +224,6 @@ assign [class="Slack"] $ws6
 
 # Move to assigned workspace when opening an application
 for_window [class="Brave-browser"] move container to workspace $ws2
-for_window [class="firefox"] move container to workspace $ws2
 for_window [class="TelegramDesktop"] move container to workspace $ws3
 for_window [class="vlc"] move container to workspace $ws4
 for_window [class="Code"] move container to workspace $ws5
