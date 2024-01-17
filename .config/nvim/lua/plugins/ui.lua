@@ -55,7 +55,9 @@ return {
               },
             },
           },
-          lualine_x = {},
+          lualine_x = {
+            Util.lualine.root_dir(),
+          },
           lualine_y = {
             {
               function()

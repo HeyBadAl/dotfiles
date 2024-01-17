@@ -19,7 +19,7 @@ config.font_size = 13
 config.line_height = 1
 
 -- config.max_fps = 144
-config.color_scheme = "Catppuccin Macchiato"
+config.color_scheme = "Catppuccin Mocha"
 
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
@@ -35,7 +35,7 @@ config.window_padding = {
 	bottom = 0,
 }
 
-config.window_background_opacity = 0.97
+-- config.window_background_opacity = 0.97
 --[[
 local root_name = '/home/badal/'
 config.window_background_image = root_name .. '.dotfiles/images/IMG_0701.png'
