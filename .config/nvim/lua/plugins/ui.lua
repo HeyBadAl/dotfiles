@@ -5,6 +5,7 @@ return {
   -- bufferline disable
   { "akinsho/bufferline.nvim", enabled = false },
 
+  -- lualine
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
