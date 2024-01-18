@@ -55,10 +55,9 @@ return {
               },
             },
           },
-          lualine_x = {
-            Util.lualine.root_dir(),
-          },
+          lualine_x = {},
           lualine_y = {
+            Util.lualine.root_dir(),
             {
               function()
                 return "  " .. require("dap").status()
