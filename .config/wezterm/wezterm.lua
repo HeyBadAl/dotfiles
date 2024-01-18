@@ -36,21 +36,19 @@ config.window_padding = {
 }
 
 -- config.window_background_opacity = 0.97
---[[
-local root_name = '/home/badal/'
-config.window_background_image = root_name .. '.dotfiles/images/IMG_0701.png'
+local root_name = "/home/badal/"
+config.window_background_image = root_name .. "Desktop/1.jpg"
 config.window_background_image_hsb = {
-  -- Darken the background image by reducing it to 1/3rd
-  brightness = 0.3,
+	-- Darken the background image by reducing it to 1/3rd
+	brightness = 0.019,
 
-  -- You can adjust the hue by scaling its value.
-  -- a multiplier of 1.0 leaves the value unchanged.
-  hue = 1.0,
+	-- You can adjust the hue by scaling its value.
+	-- a multiplier of 1.0 leaves the value unchanged.
+	hue = 1,
 
-  -- You can adjust the saturation also.
-  saturation = 1.0,
+	-- You can adjust the saturation also.
+	saturation = 1,
 }
-]]
 
 -- and finally, return the configuration to wezterm
 return config
