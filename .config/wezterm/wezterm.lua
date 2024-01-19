@@ -37,10 +37,11 @@ config.window_padding = {
 
 -- config.window_background_opacity = 0.97
 local root_name = "/home/badal/"
-config.window_background_image = root_name .. "Desktop/1.jpg"
+config.window_background_image = root_name .. "dotfiles/screenshots/dark_apple.jpg"
+-- config.window_background_image = root_name .. "Desktop/2.jpg"
 config.window_background_image_hsb = {
 	-- Darken the background image by reducing it to 1/3rd
-	brightness = 0.019,
+	brightness = 0.008,
 
 	-- You can adjust the hue by scaling its value.
 	-- a multiplier of 1.0 leaves the value unchanged.
