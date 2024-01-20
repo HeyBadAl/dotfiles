@@ -34,6 +34,9 @@ exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput 
 exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Natural Scrolling Enabled" 1
 exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Accel Speed" 0.4
 
+# start screenkey
+exec --no-startup-id screenkey --opacity 0.6
+
 ################################################################################
 #                     Key Bindings
 ###############################################################################
@@ -216,19 +219,19 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # assign applications to workspaces
-assign [class="Brave-browser"] $ws2
-assign [class="wezterm"] $ws3
+assign [class="Brave-browser"] $ws3
+assign [class="wezterm"] $ws2
 assign [class="TelegramDesktop"] $ws5
 assign [class="vlc"] $ws4
-assign [class="Code"] $ws7
+assign [class="Code"] $ws5
 assign [class="Slack"] $ws6
 
 # Move to assigned workspace when opening an application
-for_window [class="Brave-browser"] move container to workspace $ws2
-for_window [class="wezterm"] move container to workspace $ws3
+for_window [class="Brave-browser"] move container to workspace $ws3
+for_window [class="wezterm"] move container to workspace $ws2
 for_window [class="TelegramDesktop"] move container to workspace $ws5
 for_window [class="vlc"] move container to workspace $ws4
-for_window [class="Code"] move container to workspace $ws7
+for_window [class="Code"] move container to workspace $ws5
 for_window [class="Slack"] move container to workspace $ws6
 
 
