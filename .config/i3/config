@@ -329,5 +329,3 @@ client.urgent		$u-bgcolor	$u-bgcolor	$text		$u-bgcolor
 #     binding_mode       $base $base $surface1
 #   }
 # }
-#
-#
