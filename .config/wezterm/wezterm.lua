@@ -16,7 +16,7 @@ end
 
 config.font = wezterm.font("JetBrainsMonoNL NF")
 config.font_size = 13
-config.line_height = 1
+-- config.line_height = 1
 
 -- config.max_fps = 144
 config.color_scheme = "Catppuccin Mocha"
@@ -36,7 +36,9 @@ config.window_padding = {
 local root_name = "/home/badal/"
 config.window_background_image = root_name .. ".dotfiles/screenshots/dark_apple.jpg"
 config.window_background_image_hsb = {
-	brightness = 0.006,
+	brightness = 0.005,
 }
+
+config.text_background_opacity = 0.8
 
 return config
