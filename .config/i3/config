@@ -329,3 +329,7 @@ client.urgent		$u-bgcolor	$u-bgcolor	$text		$u-bgcolor
 #     binding_mode       $base $base $surface1
 #   }
 # }
+
+
+# Stop io.elementary.a
+exec --no-startup-id pkill io.elementary.a

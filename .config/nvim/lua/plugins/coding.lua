@@ -1,5 +1,5 @@
 return {
-  { import = "plugins.extras.coding.codeium" },
+  { import = "plugins.extras.coding.coding" },
 
   -- comment
   {

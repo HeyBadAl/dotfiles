@@ -1,8 +1,8 @@
 return {
+  -- codeium
   {
     "nvim-cmp",
     dependencies = {
-      -- codeium
       {
         "Exafunction/codeium.nvim",
         cmd = "Codeium",
@@ -78,13 +78,11 @@ return {
     },
   },
 
-  -- lualine.nvim
+  -- lspkind.nvim
   {
-    "nvim-lualine/lualine.nvim",
-    optional = true,
-    event = "VeryLazy",
-    opts = function(_, opts)
-      table.insert(opts.sections.lualine_x, 2, require("lazyvim.util").lualine.cmp_source("codeium"))
+    "onsails/lspkind-nvim",
+    config = function()
+      require("lspkind").init({})
     end,
   },
 }

@@ -17,3 +17,6 @@ map("n", "<leader>m", ":NvimTreeFocus<cr>", { desc = "Focus NvimTree" })
 local api = vim.api
 api.nvim_set_keymap("n", "<leader>cc", "gcc", { noremap = false })
 api.nvim_set_keymap("v", "<leader>cc", "gcc", { noremap = false })
+
+-- select all
+map("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
