@@ -85,4 +85,46 @@ return {
       require("lspkind").init({})
     end,
   },
+
+  -- harpoon
+  {
+    "ThePrimeagen/harpoon",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("harpoon").setup({})
+    end,
+
+    keys = {
+      {
+        "<leader>a",
+        function()
+          require("harpoon.mark").add_file()
+        end,
+        desc = "Harpoon add file",
+      },
+      {
+        "<C-e>",
+        function()
+          require("harpoon.ui").toggle_quick_menu()
+        end,
+        desc = "Harpoon quick menu",
+      },
+      {
+        "<C-h>",
+        function()
+          require("harpoon.ui").nav_next()
+        end,
+        desc = "Harpoon next",
+      },
+      {
+        "<C-l>",
+        function()
+          require("harpoon.ui").nav_prev()
+        end,
+        desc = "Harpoon prev",
+      },
+    },
+  },
 }
