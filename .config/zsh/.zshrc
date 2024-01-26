@@ -42,7 +42,9 @@ alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
 alias tn="tmux new -s"
 
-
+# git alias for status 
+alias gs="git status -s"
+alias gl='git log --oneline --all --graph'
 
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
