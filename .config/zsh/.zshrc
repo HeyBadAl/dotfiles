@@ -46,6 +46,9 @@ alias tn="tmux new -s"
 alias gs="git status -s"
 alias gl='git log --oneline --all --graph'
 
+# notify alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
