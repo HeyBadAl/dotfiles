@@ -16,10 +16,9 @@ end
 
 config.font = wezterm.font("JetBrainsMonoNL NF")
 config.font_size = 13
--- config.line_height = 1
 
 -- config.max_fps = 144
-config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "Catppuccin Mocha"
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
@@ -32,13 +31,13 @@ config.window_padding = {
 	bottom = 0,
 }
 
--- config.window_background_opacity = 0.97
-local root_name = "/home/badal/"
-config.window_background_image = root_name .. ".dotfiles/screenshots/dark_apple.jpg"
-config.window_background_image_hsb = {
-	brightness = 0.005,
-}
+config.window_background_opacity = 0.96
+-- local root_name = "/home/badal/"
+-- config.window_background_image = root_name .. ".dotfiles/screenshots/dark_apple.jpg"
+-- config.window_background_image_hsb = {
+-- 	brightness = 0.006,
+-- }
 
-config.text_background_opacity = 0.8
+config.text_background_opacity = 0.6
 
 return config
