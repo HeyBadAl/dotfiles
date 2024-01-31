@@ -127,4 +127,27 @@ return {
       },
     },
   },
+
+  -- gitsigns
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup({})
+    end,
+
+    keys = {
+      {
+        "<leader>gp",
+        function()
+          require("gitsigns").preview_hunk()
+        end,
+      },
+      {
+        "<leader>gt",
+        function()
+          require("gitsigns").toggle_current_line_blame()
+        end,
+      },
+    },
+  },
 }
