@@ -31,7 +31,7 @@ config.window_padding = {
 	bottom = 0,
 }
 
-config.window_background_opacity = 0.97
+config.window_background_opacity = 0.9
 -- local root_name = "/home/badal/"
 -- config.window_background_image = root_name .. ".dotfiles/screenshots/dark_apple.jpg"
 -- config.window_background_image_hsb = {
