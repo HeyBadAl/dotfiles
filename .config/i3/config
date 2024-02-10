@@ -260,8 +260,8 @@ bar {
 }
 
 # Color shemes for windows 
-set $bgcolor	#523d6499
-set $in-bgcolor #3636364D
+set $bgcolor	#ffffff50
+set $in-bgcolor #444444
 set $text	#ffffff
 set $u-bgcolor	#ff0000
 set $indicator	#a8a3c1
