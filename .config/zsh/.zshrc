@@ -29,7 +29,7 @@ alias ls='lsd'
 
 alias bat='batcat'
 alias bt="acpi"
-alias al="sudo apt update; sudo apt upgrade -y; brew update; brew upgrade"
+alias al="sudo apt update; sudo apt upgrade -y; brew update; brew upgrade; sudo apt autoremove -y; sudo apt clean; brew cleanup;"
 alias cl='sudo apt autoremove -y; sudo apt clean; brew cleanup;'
 alias lg="lazygit"
 
@@ -72,7 +72,7 @@ else
 fi
 
 # fzf 
-# source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 # starship 
 # eval "$(starship init zsh)"
