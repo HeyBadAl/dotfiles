@@ -241,7 +241,7 @@ for_window [class="Slack"] move container to workspace $ws6
 ###############################################################################
 
 # borders
-default_border pixel 2
+default_border pixel 1
 default_floating_border pixel 1
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -261,7 +261,7 @@ bar {
 
 # Color shemes for windows 
 set $bgcolor	#ffffff50
-set $in-bgcolor #444444
+set $in-bgcolor #44444440
 set $text	#ffffff
 set $u-bgcolor	#ff0000
 set $indicator	#a8a3c1
