@@ -57,6 +57,9 @@ require("lazy").setup({
     -- neotest
     { import = "lazyvim.plugins.extras.test.core" },
 
+    -- rust
+    { import = "lazyvim.plugins.extras.lang.rust" },
+
     { import = "plugins" },
   },
   defaults = {
