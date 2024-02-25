@@ -17,7 +17,7 @@ return {
       vim.o.laststatus = vim.g.lualine_laststatus
       return {
         options = {
-          theme = "catppuccin",
+          theme = "sonokai",
           globalstatus = true,
           disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
         },
