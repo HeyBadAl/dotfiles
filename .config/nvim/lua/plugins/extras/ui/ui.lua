@@ -7,7 +7,7 @@ return {
   --     require("drop").setup({
   --       theme = "leaves", -- leaves, snow, stars, xmas, spring, summer
   --       max = 30,
-  --       screensaver = 1000 * 60 * 5, -- show after 2 minutes. Set to false, to disable
+  --       screensaver = 1000 * 60 * 1, -- show after 2 minutes. Set to false, to disable
   --     })
   --   end,
   -- },
