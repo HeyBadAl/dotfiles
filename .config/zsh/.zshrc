@@ -15,6 +15,7 @@ plugins=(
   docker
   aws
   kubectl
+  kind
   minikube
 	zsh-autosuggestions 
 	zsh-syntax-highlighting
