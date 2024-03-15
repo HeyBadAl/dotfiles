@@ -58,3 +58,4 @@ augroup END
 
 colorscheme default 
 
+set directory=$HOME/.vim/swp//
