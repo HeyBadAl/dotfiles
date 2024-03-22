@@ -11,8 +11,13 @@ export LANG=en_US.UTF-8
 
 ZSH_THEME="robbyrussell"
 
+##########################################################################################
+#                                 OH MY ZSH PLUGINS
+##########################################################################################
+
 plugins=(
   docker
+  brew
   aws
   kubectl
   kind
@@ -23,7 +28,13 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+###########################################################################################
+#                                ALIASES AND ALIASES
+#########################################################################################
+
 alias c=clear
 alias history="history -E"
 alias ls='lsd'
@@ -37,20 +48,27 @@ alias lg="lazygit"
 alias r='source ~/.zshrc'
 alias n='nvim'
 
+alias air='~/go/bin/air'
 
-# tmux alias 
+# python 
+alias python='python3'
+alias pip='pip3'
+
+# tmux 
 alias t="tmux"
 alias tk="tmux kill-session -t"
 alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
 alias tn="tmux new -s"
 
-# git alias for status 
+# git 
 alias gs="git status -s"
 alias gl='git log --oneline --all --graph'
 
 # notify alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+###########################################################################################
 
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
@@ -83,3 +101,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@15/bin:$PATH" 
+export PATH="/home/linuxbrew/.linuxbrew/opt/postgresql@16/bin:$PATH"
