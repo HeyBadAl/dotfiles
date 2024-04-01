@@ -24,7 +24,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xautolock -time 1500 -locker "i3lock -c 000000"
 
 # picom 
-exec --no-startup-id picom -b
+# exec --no-startup-id picom -b
 
 # wallpaper
 exec --no-startup-id nitrogen --restore
@@ -32,7 +32,7 @@ exec --no-startup-id nitrogen --restore
 # touchpad single click and natural scrolling 
 exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Natural Scrolling Enabled" 1
-exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Accel Speed" 0.4
+exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Accel Speed" 0.5
 
 # start screenkey
 exec --no-startup-id screenkey --opacity 0.6
@@ -47,7 +47,7 @@ floating_modifier $mod
 # tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec /home/linuxbrew/.linuxbrew/bin/wezterm
+bindsym $mod+Return exec /usr/bin/wezterm
 # bindsym $mod+Return exec /usr/bin/konsole
 
 # set keybind for opening Brave-browser
@@ -140,6 +140,9 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5 # decrease screen brightness
 
+# bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+# bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
@@ -221,7 +224,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # assign applications to workspaces
 assign [class="Brave-browser"] $ws3
 assign [class="wezterm"] $ws2
-assign [class="TelegramDesktop"] $ws5
+assign [class="TelegramDesktop"] $ws6
 assign [class="vlc"] $ws4
 assign [class="Code"] $ws5
 assign [class="Slack"] $ws6
@@ -229,7 +232,7 @@ assign [class="Slack"] $ws6
 # Move to assigned workspace when opening an application
 for_window [class="Brave-browser"] move container to workspace $ws3
 for_window [class="wezterm"] move container to workspace $ws2
-for_window [class="TelegramDesktop"] move container to workspace $ws5
+for_window [class="TelegramDesktop"] move container to workspace $ws6
 for_window [class="vlc"] move container to workspace $ws4
 for_window [class="Code"] move container to workspace $ws5
 for_window [class="Slack"] move container to workspace $ws6
@@ -260,7 +263,7 @@ bar {
 }
 
 # Color shemes for windows 
-set $bgcolor	#ffffff50
+set $bgcolor	#ffffff70
 set $in-bgcolor #44444440
 set $text	#ffffff
 set $u-bgcolor	#ff0000
@@ -329,3 +332,6 @@ client.urgent		$u-bgcolor	$u-bgcolor	$text		$u-bgcolor
 #     binding_mode       $base $base $surface1
 #   }
 # }
+
+# gaps inner 10
+# gaps outer 5
