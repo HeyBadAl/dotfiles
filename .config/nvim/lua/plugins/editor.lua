@@ -1,5 +1,22 @@
 local Util = require("lazyvim.util")
 return {
+  -- nvim-cmp
+  {
+    "hrsh7th/nvim-cmp",
+    opts = {
+      window = {
+        completion = { -- rounded border; thin-style scrollbar
+          border = "rounded",
+          scrollbar = "║",
+        },
+        documentation = { -- no border; native-style scrollbar
+          border = "rounded",
+          scrollbar = "║",
+        },
+      },
+    },
+  },
+
   -- diable flash
   {
     enabled = false,
