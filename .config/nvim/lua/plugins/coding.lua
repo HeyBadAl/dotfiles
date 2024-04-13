@@ -1,15 +1,6 @@
 return {
   { import = "plugins.extras.coding.coding" },
 
-  -- comment
-  {
-    "numToStr/Comment.nvim",
-    opts = {
-      -- add any options here
-    },
-    lazy = false,
-  },
-
   -- autopairs
   {
     "windwp/nvim-autopairs",
