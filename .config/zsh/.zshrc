@@ -146,7 +146,4 @@ _fzf_compgen_dir() {
 # thefuck 
 eval $(thefuck --alias)
 
-source ~/fzf-git.sh/fzf-git.sh
-
-# ----- Bat (better cat) -----
-
+export BAT_THEME="Catppuccin Mocha"
