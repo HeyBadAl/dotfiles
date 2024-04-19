@@ -37,7 +37,8 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 alias c=clear
 alias history="history -E"
-alias ls='lsd'
+# alias ls='lsd'
+alias ls="eza --long --icons --tree --level=1 --git "
 
 # alias bat='batcat'
 alias bt="acpi"
