@@ -39,7 +39,6 @@ alias c=clear
 alias history="history -E"
 alias ls='lsd'
 
-alias bat='batcat'
 # alias bat='batcat'
 alias bt="acpi"
 alias al="sudo apt update; sudo apt upgrade -y; brew update; brew upgrade; sudo apt autoremove -y; sudo apt clean; brew cleanup;"
@@ -124,7 +123,10 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
+# thefuck 
+eval $(thefuck --alias)
 
 source ~/fzf-git.sh/fzf-git.sh
 
 # ----- Bat (better cat) -----
+
