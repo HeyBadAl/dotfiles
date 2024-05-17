@@ -38,8 +38,8 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 alias c=clear
 alias history="history -E"
 # alias ls='lsd'
-alias ls="eza --long --icons --git --tree --level=1"
-alias la='ls --all'
+alias ls='eza'
+alias la="eza --all --long --icons --git --tree --level=1"
 alias l='la'
 alias ll='l'
 
@@ -82,17 +82,17 @@ export PATH=$PATH:/usr/local/go/bin
 # add Pulumi to the PATH
 export PATH=$PATH:$HOME/.pulumi/bin
 
-# HISTSIZE and no command repetition 
-HISTSIZE=4000
-if [[ -n "$TMUX" ]]; then
-    setopt HIST_IGNORE_DUPS
-    setopt HIST_IGNORE_ALL_DUPS
-    setopt HIST_IGNORE_SPACE
-else
-    setopt HIST_IGNORE_DUPS
-    setopt HIST_IGNORE_ALL_DUPS
-    setopt HIST_IGNORE_SPACE
-fi
+# History
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
 # fzf 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
