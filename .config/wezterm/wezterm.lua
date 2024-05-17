@@ -35,7 +35,7 @@ config.window_padding = {
 
 -- config.window_background_opacity = 0.69
 local root_name = "/home/badal/"
-config.window_background_image = root_name .. ".dotfiles/screenshots/car_5.jpg"
+-- config.window_background_image = root_name .. ".dotfiles/screenshots/car_5.jpg"
 config.window_background_image_hsb = {
 	brightness = 0.05,
 }
