@@ -19,7 +19,7 @@ config.font_size = 13
 
 config.max_fps = 145
 -- config.color_scheme = "Sonokai (Gogh)"
--- config.color_scheme = "Catppuccin Mocha"
+-- -- config.color_scheme = "Catppuccin Mocha"
 config.color_scheme = "Tokyo Night"
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
@@ -32,12 +32,12 @@ config.window_padding = {
 	top = 22,
 	bottom = 0,
 }
-
--- config.window_background_opacity = 0.69
+-- config.window_background_opacity = 0.8
 local root_name = "/home/badal/"
--- config.window_background_image = root_name .. ".dotfiles/screenshots/car_5.jpg"
+-- config.window_background_image = root_name .. ".dotfiles/screenshots/Imgur.jpg"
 config.window_background_image_hsb = {
-	brightness = 0.05,
+	brightness = 0.011,
+	-- saturation = 0.41,
 }
 
 config.text_background_opacity = 0.79
