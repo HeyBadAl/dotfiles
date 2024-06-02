@@ -19,7 +19,7 @@ return {
         options = {
           theme = "auto",
           globalstatus = true,
-          disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
+          disabled_filetypes = { statusline = { "alpha", "starter" } },
         },
         sections = {
           lualine_b = {

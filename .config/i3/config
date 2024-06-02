@@ -333,5 +333,5 @@ client.urgent		$u-bgcolor	$u-bgcolor	$text		$u-bgcolor
 #   }
 # }
 
-# gaps inner 10
+# gaps inner 19
 # gaps outer 5
