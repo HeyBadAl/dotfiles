@@ -22,7 +22,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.docker" },
 
     -- markdown
-    { import = "lazyvim.plugins.extras.lang.markdown" },
+    -- { import = "lazyvim.plugins.extras.lang.markdown" },
 
     -- python
     { import = "lazyvim.plugins.extras.lang.python" },
