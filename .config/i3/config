@@ -34,8 +34,9 @@ exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput 
 exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Natural Scrolling Enabled" 1
 exec --no-startup-id xinput set-prop "ELAN072B:00 04F3:30A0 Touchpad" "libinput Accel Speed" 0.5
 
+
 # start screenkey
-exec --no-startup-id screenkey --opacity 0.6
+# exec --no-startup-id screenkey --opacity 0.6
 
 ################################################################################
 #                     Key Bindings
@@ -227,7 +228,8 @@ assign [class="wezterm"] $ws2
 assign [class="TelegramDesktop"] $ws6
 assign [class="vlc"] $ws4
 assign [class="Code"] $ws5
-assign [class="Slack"] $ws6
+assign [class="Slack"] $ws7
+assign [class="Discord"] $ws7
 
 # Move to assigned workspace when opening an application
 for_window [class="Brave-browser"] move container to workspace $ws3
@@ -235,7 +237,8 @@ for_window [class="wezterm"] move container to workspace $ws2
 for_window [class="TelegramDesktop"] move container to workspace $ws6
 for_window [class="vlc"] move container to workspace $ws4
 for_window [class="Code"] move container to workspace $ws5
-for_window [class="Slack"] move container to workspace $ws6
+for_window [class="Slack"] move container to workspace $ws7
+for_window [class="Discord"] move container to workspace $ws7
 
 
 
