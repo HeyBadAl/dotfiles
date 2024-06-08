@@ -14,13 +14,16 @@ end
 --                             General Config
 -------------------------------------------------------------------------------
 
-config.font = wezterm.font("JetBrainsMonoNL NF")
-config.font_size = 13
+config.font = wezterm.font("IBM Plex Mono", { weight = "Medium" })
+
+config.font_size = 14
+config.line_height = 1
 
 config.max_fps = 145
 -- config.color_scheme = "Sonokai (Gogh)"
 -- -- config.color_scheme = "Catppuccin Mocha"
-config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Tokyo Night"
+config.color_scheme = "Tomorrow"
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
@@ -29,10 +32,10 @@ config.enable_scroll_bar = false
 config.window_padding = {
 	left = 0,
 	right = 0,
-	top = 22,
+	top = 7,
 	bottom = 0,
 }
--- config.window_background_opacity = 0.8
+-- config.window_background_opacity = 0.99
 local root_name = "/home/badal/"
 -- config.window_background_image = root_name .. ".dotfiles/screenshots/Imgur.jpg"
 config.window_background_image_hsb = {
