@@ -15,15 +15,15 @@ end
 -------------------------------------------------------------------------------
 
 config.font = wezterm.font("IBM Plex Mono", { weight = "Medium" })
+-- config.font = wezterm.font("JetBrainsMonoNL Nerd Font")
 
 config.font_size = 14
 config.line_height = 1
 
 config.max_fps = 145
--- config.color_scheme = "Sonokai (Gogh)"
 -- -- config.color_scheme = "Catppuccin Mocha"
--- config.color_scheme = "Tokyo Night"
-config.color_scheme = "Tomorrow"
+config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Tomorrow"
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
