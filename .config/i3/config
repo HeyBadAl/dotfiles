@@ -57,7 +57,7 @@ bindsym $mod+b exec /usr/bin/brave-browser
 bindsym $mod+q kill
 
 # start dmenu
-bindsym $mod+d exec rofi -show drun 
+# bindsym $mod+d exec rofi -show drun 
 
 # change focus
 bindsym $mod+j focus left
@@ -287,7 +287,8 @@ set $flamingo  #f2cdcd
 set $pink      #f5c2e7
 set $mauve     #cba6f7
 set $red       #f38ba8
-set $maroon    #eba0ac
+set $gray #d3d3d370
+set $maroon    #eba0ac96
 set $peach     #fab387
 set $yellow    #f9e2af
 set $green     #a6e3a1
@@ -335,5 +336,5 @@ bar {
   }
 }
 
-# gaps inner 19
+# gaps inner 2
 # gaps outer 5
