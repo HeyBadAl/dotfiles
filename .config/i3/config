@@ -223,6 +223,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # assign applications to workspaces
 assign [class="Brave-browser"] $ws3
+assign [class="Postman"] $ws4
 assign [class="wezterm"] $ws2
 assign [class="TelegramDesktop"] $ws6
 assign [class="vlc"] $ws4
@@ -232,6 +233,7 @@ assign [class="Discord"] $ws7
 
 # Move to assigned workspace when opening an application
 for_window [class="Brave-browser"] move container to workspace $ws3
+for_window [class="Postman"] move container to workspace $ws4
 for_window [class="wezterm"] move container to workspace $ws2
 for_window [class="TelegramDesktop"] move container to workspace $ws6
 for_window [class="vlc"] move container to workspace $ws4
@@ -288,7 +290,7 @@ set $pink      #f5c2e7
 set $mauve     #cba6f7
 set $red       #f38ba8
 set $gray #d3d3d370
-set $maroon    #eba0ac96
+set $maroon    #eba0ac95
 set $peach     #fab387
 set $yellow    #f9e2af
 set $green     #a6e3a1
@@ -313,10 +315,11 @@ set $crust     #11111b
 
 #			border		background	text		indicator (a line which shows where the next window will be placed)	
 # target                 title     bg    text   indicator  border
-client.focused           $lavender $base $text  $rosewater $maroon
+client.focused           $lavender $base $text  $rosewater $teal
 client.focused_inactive  $overlay0 $base $text  $rosewater $wverlay0
 client.unfocused         $overlay0 $base $text  $rosewater $overlay0
 client.urgent            $peach    $base $peach $overlay0  $peach
+# 		urgent_workspace	$u-bgcolor	$u-bgcolor	$text
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
@@ -331,7 +334,7 @@ bar {
     focused_workspace  $base $base $green
     active_workspace   $base $base $blue
     inactive_workspace $base $base $surface1
-    urgent_workspace   $base $base $surface1
+    urgent_workspace   $red $red $base
     binding_mode       $base $base $surface1
   }
 }
