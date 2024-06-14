@@ -14,8 +14,10 @@ end
 --                             General Config
 -------------------------------------------------------------------------------
 
-config.font = wezterm.font("IBM Plex Mono", { weight = "Medium" })
--- config.font = wezterm.font("JetBrainsMonoNL Nerd Font")
+-- config.font = wezterm.font("IBM Plex Mono")
+
+config.font = wezterm.font("JetBrainsMonoNL Nerd Font")
+-- config.font = wezterm.font("IBMPlexMono")
 
 config.font_size = 14
 config.line_height = 1
